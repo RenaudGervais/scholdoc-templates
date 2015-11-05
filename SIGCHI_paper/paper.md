@@ -1,9 +1,19 @@
 ---
 title: 'The best paper ever'
+numberofauthors: 3
 author:
-  - 1st Author Name
-  - 2nd Author Name
-  - 3rd Author Name
+  - name: 1st Author Name
+    affaddr: 123 av Drive, Town
+    affaddr: Country, 12345
+    email: my.name@domain.com
+  - name: 2nd Author Name
+    affaddr: 123 av Drive, Town
+    affaddr: Country, 12345
+    email: my.name@domain.com
+  - name: 3rd Author Name
+    affaddr: 123 av Drive, Town
+    affaddr: Country, 12345
+    email: my.name@domain.com
 abstract:  'This sample paper should produce an output almost identical to the SIGCHI reference format. No refund if papers are rejected.'
 
 keywords: [Scholdoc, Template, Markdown]
