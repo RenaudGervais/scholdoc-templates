@@ -243,8 +243,37 @@ $endif$
 $if(title)$
 \title{$title$$if(subtitle)$\\\vspace{0.5em}{\large $subtitle$}$endif$}
 $endif$
+
+% Authors in the sigchi template uses \numberofauthors{} and \alignauthor{}
+% to correctly position the authors' information as such:
+% \numberofauthors{3}
+% \author{%
+%   \alignauthor{1st Author Name\\
+%     \affaddr{Affiliation}\\
+%     \affaddr{City, Country}\\
+%     \email{e-mail address}}\\
+%   \alignauthor{2nd Author Name\\
+%     \affaddr{Affiliation}\\
+%     \affaddr{City, Country}\\
+%     \email{e-mail address}}\\
+%   \alignauthor{3rd Author Name\\
+%     \affaddr{Affiliation}\\
+%     \affaddr{City, Country}\\
+%     \email{e-mail address}}\\
+% }
+$if(numberofauthors)$
+\numberofauthors{$numberofauthors$}
+$endif$
 $if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+\author{%
+  $for(author)$
+  \alignauthor{$author.name$\\
+    $for(author.affaddr)$
+    \affaddr{$author.affaddr$}\\
+    $endfor$
+    \email{$author.email$}}\\
+  $endfor$
+}
 $endif$
 \date{$date$}
 
